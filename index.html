@@ -212,7 +212,7 @@
         display: flex;
         align-items: center;
         margin: 20px;
-        width: 100%;
+        justify-content: space-between;
       }
       .modal-button {
         margin-left: 50px;
@@ -441,6 +441,9 @@
         .image-controls-next {
           right: 15px;
         }
+        .modal-button {
+          margin-left: 80px;
+        }
       }
 
       .hidden {
@@ -599,7 +602,6 @@
         updateModal();
         updateCart();
         if (count > 0) {
-          addToCartButton.disabled = true;
           addToCartButton.classList.add("disabled");
         }
       }
@@ -672,7 +674,6 @@
         updateCart();
         updateCounter();
 
-        addToCartButton.disabled = false;
         addToCartButton.classList.remove("disabled");
       };
 
