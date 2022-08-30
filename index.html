@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kumbh+Sans" />
 
     <title>Frontend Mentor | E-commerce product page</title>
@@ -451,7 +451,7 @@
         <div class="navigation">
           <div class="logo">
             <img class="menu-button" onclick="toggleMenu()" src="images/icon-menu.svg" />
-            <img src="./images/logo.svg" />
+            <img src="images/logo.svg" />
           </div>
 
           <ul class="links" id="menu">
@@ -478,37 +478,37 @@
         <div class="profile-section">
           <div class="cart-container">
             <div class="cart-items-count hidden" id="cart-counter"></div>
-            <img src="/images/icon-cart.svg" class="cart" onclick="toggleCartModal()" />
+            <img src="images/icon-cart.svg" class="cart" onclick="toggleCartModal()" />
           </div>
-          <img src="/images/image-avatar.png" width="64px" height="64px" />
+          <img src="images/image-avatar.png" width="64px" height="64px" />
         </div>
       </nav>
     </header>
 
     <main class="main-content">
       <div class="product-showcase">
-        <img id="full-image" class="full-image" src="/images/image-product-1.jpg" onclick="toggleImageModal()" />
+        <img id="full-image" class="full-image" src="images/image-product-1.jpg" onclick="toggleImageModal()" />
 
         <div class="image-thumbnails-container">
-          <img onclick="updateMainImg(1)" src="/images/image-product-1-thumbnail.jpg" />
+          <img onclick="updateMainImg(1)" src="images/image-product-1-thumbnail.jpg" />
 
-          <img onclick="updateMainImg(2)" src="/images/image-product-2-thumbnail.jpg" />
-          <img onclick="updateMainImg(3)" src="/images/image-product-3-thumbnail.jpg" />
-          <img onclick="updateMainImg(4)" src="/images/image-product-4-thumbnail.jpg" />
+          <img onclick="updateMainImg(2)" src="images/image-product-2-thumbnail.jpg" />
+          <img onclick="updateMainImg(3)" src="images/image-product-3-thumbnail.jpg" />
+          <img onclick="updateMainImg(4)" src="images/image-product-4-thumbnail.jpg" />
         </div>
       </div>
       <div class="hidden image-modal" id="image-modal">
         <div class="product-showcase">
           <div class="image-with-controls">
-            <img src="/images/icon-previous.svg" class="image-controls image-controls-prev" onclick="prevImg()" />
-            <img id="modal-image" class="modal-full-image" src="/images/image-product-1.jpg" />
-            <img src="/images/icon-next.svg" class="image-controls image-controls-next" onclick="nextImg()" />
+            <img src="images/icon-previous.svg" class="image-controls image-controls-prev" onclick="prevImg()" />
+            <img id="modal-image" class="modal-full-image" src="images/image-product-1.jpg" />
+            <img src="images/icon-next.svg" class="image-controls image-controls-next" onclick="nextImg()" />
           </div>
           <div class="image-thumbnails-container modal-images-preview" id="images-preview">
-            <img class="active" src="/images/image-product-1-thumbnail.jpg" />
-            <img src="/images/image-product-2-thumbnail.jpg" />
-            <img src="/images/image-product-3-thumbnail.jpg" />
-            <img src="/images/image-product-4-thumbnail.jpg" />
+            <img class="active" src="images/image-product-1-thumbnail.jpg" />
+            <img src="images/image-product-2-thumbnail.jpg" />
+            <img src="images/image-product-3-thumbnail.jpg" />
+            <img src="images/image-product-4-thumbnail.jpg" />
           </div>
         </div>
       </div>
@@ -527,12 +527,12 @@
 
         <div class="btns-container">
           <div class="counter">
-            <button onclick="minusOne()"><img src="/images/icon-minus.svg" /></button>
+            <button onclick="minusOne()"><img src="images/icon-minus.svg" /></button>
             <p><b id="counter"></b></p>
-            <button onclick="addOne()"><img src="/images/icon-plus.svg" /></button>
+            <button onclick="addOne()"><img src="images/icon-plus.svg" /></button>
           </div>
 
-          <button id="add-to-cart-button" class="primary-button" onclick="onAddOrder()"><img src="/images/icon-cart-white.svg" class="cart-icon" />Add to cart</button>
+          <button id="add-to-cart-button" class="primary-button" onclick="onAddOrder()"><img src="images/icon-cart-white.svg" class="cart-icon" />Add to cart</button>
         </div>
       </div>
 
@@ -610,15 +610,15 @@
 
       const changePicture = (e) => {
         e.target.classList.add("active");
-        fullImage.src = `/images/image-product-${e.target.dataset.id}.jpg`;
+        fullImage.src = `images/image-product-${e.target.dataset.id}.jpg`;
         updateImagePreview();
       };
 
       const updateModal = () => {
-        const content = `<img class="modal-image" src="/images/image-product-1-thumbnail.jpg" />
+        const content = `<img class="modal-image" src="images/image-product-1-thumbnail.jpg" />
             <div  class="modal-text">
               <div> Fall Limited Edition Sneakers </div> $125.00 x ${count} <b>$${count * 125}.00</b> </div>
-            <img src="/images/icon-delete.svg" class="delete-icon" onclick="deleteOrder()"/>`;
+            <img src="images/icon-delete.svg" class="delete-icon" onclick="deleteOrder()"/>`;
 
         if (count > 0) {
           modalContent.innerHTML = content;
@@ -628,12 +628,12 @@
         }
       };
       const updateMainImg = (number) => {
-        mainImg.src = `/images/image-product-${number}.jpg`;
+        mainImg.src = `images/image-product-${number}.jpg`;
         controlActiveImage(imagesPreviewArray, number);
       };
 
       const updateModalImg = (number) => {
-        modalImage.src = `/images/image-product-${number}.jpg`;
+        modalImage.src = `images/image-product-${number}.jpg`;
         controlActiveImage(imagesPreviewArrayModal, number);
       };
 
